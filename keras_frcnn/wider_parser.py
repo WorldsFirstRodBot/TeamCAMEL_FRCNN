@@ -47,8 +47,7 @@ def get_data(input_path):
 #            printProgressBar(count, 159424, prefix='Parsing annotation file')
             count += 1
             all_imgs[filename]['bboxes'].append({'class': class_name, 'x1': int(x1), 'x2': int(x2), 'y1': int(y1), 'y2': int(y2)})
-            if count > 4000:
-                break
+
 
         all_data = []
         for key in all_imgs:
