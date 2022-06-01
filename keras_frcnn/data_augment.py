@@ -11,7 +11,6 @@ def augment(img_data, config, augment=True):
     assert 'height' in img_data
 
     img_data_aug = copy.deepcopy(img_data)
-    print("goomba " + str(img_data_aug['width']))
     
     img = cv2.imread(img_data_aug['filepath'])
 
@@ -68,7 +67,6 @@ def augment(img_data, config, augment=True):
                     bbox['y2'] = x2
                 elif angle == 0:
                     pass
-    print(img.shape)
     img_data_aug['width'] = img.shape[1]
     img_data_aug['height'] = img.shape[0]
     return img_data_aug, img
